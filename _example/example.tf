@@ -20,4 +20,5 @@ module "service-account" {
   key_algorithm               = "KEY_ALG_RSA_2048"
   public_key_type             = "TYPE_X509_PEM_FILE"
   private_key_type            = "TYPE_GOOGLE_CREDENTIALS_FILE"
+  service_account_ids         = module.service-account.name
 }

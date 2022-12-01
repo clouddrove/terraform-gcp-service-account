@@ -96,3 +96,22 @@ variable "service_account_id" {
   description = "The account id that is used to generate the service account email address and a stable unique id"
 
 }
+
+variable "service_account_ids" {
+  type        = string
+  default     = ""
+  description = "The account id that is used to generate the service account email address and a stable unique id"
+
+}
+
+variable "google_service_account_iam_binding_enabled" {
+  type        = bool
+  default     = true
+  description = "Flag to control the service_account_enabled creation."
+}
+
+variable "google_service_account_iam_policy_enabled" {
+  type        = bool
+  default     = true
+  description = "Flag to control the service_account_enabled creation."
+}
