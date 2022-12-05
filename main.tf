@@ -33,6 +33,6 @@ resource "google_service_account_iam_binding" "admin-account-iam" {
   service_account_id = var.service_account_ids
   role               = "roles/iam.serviceAccountUser"
   members = [
-    "user:prashant.yadav@clouddrove.com",
+    "",
   ]
 }
