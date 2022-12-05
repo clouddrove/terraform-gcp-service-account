@@ -109,9 +109,3 @@ variable "google_service_account_iam_binding_enabled" {
   default     = true
   description = "Flag to control the service_account_enabled creation."
 }
-
-variable "google_service_account_iam_policy_enabled" {
-  type        = bool
-  default     = true
-  description = "Flag to control the service_account_enabled creation."
-}

@@ -32,27 +32,7 @@ resource "google_service_account_iam_binding" "admin-account-iam" {
 
   service_account_id = var.service_account_ids
   role               = "roles/iam.serviceAccountUser"
-
   members = [
     "user:prashant.yadav@clouddrove.com",
   ]
-}
-
-data "google_iam_policy" "admin" {
-  binding {
-    role = "roles/iam.serviceAccountUser"
-
-    members = [
-      "user:prashant.yadav@clouddrove.com",
-    ]
-  }
-}
-
-
-resource "google_service_account_iam_policy" "admin-account-iam" {
-  count = var.google_service_account_iam_policy_enabled && var.module_enabled ? 1 : 0
-
-
-  service_account_id = var.service_account_ids
-  policy_data        = data.google_iam_policy.admin.policy_data
 }
