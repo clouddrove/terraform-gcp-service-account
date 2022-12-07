@@ -13,7 +13,7 @@ resource "google_service_account" "default" {
   account_id   = module.labels.id
   display_name = module.labels.id
   description  = var.description
-  project      = var.project
+  project      = var.project_id
 }
 
 resource "google_service_account_key" "default" {

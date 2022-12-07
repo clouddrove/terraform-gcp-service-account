@@ -28,7 +28,7 @@ variable "service_account_enabled" {
   description = "Flag to control the service_account_enabled creation."
 }
 
-variable "project" {
+variable "project_id" {
   type        = string
   default     = ""
   description = "The project in which the resource belongs. If it is not provided, the provider project is used."

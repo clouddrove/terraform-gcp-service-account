@@ -13,7 +13,7 @@ module "service-account" {
   label_order = var.label_order
 
   service_account_enabled     = true
-  project                     = "clouddrove"
+  project_id                  = "clouddrove"
   service_account_key_enabled = true
   key_algorithm               = "KEY_ALG_RSA_2048"
   public_key_type             = "TYPE_X509_PEM_FILE"
