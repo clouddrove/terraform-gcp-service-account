@@ -28,14 +28,7 @@ variable "service_account_enabled" {
   description = "Flag to control the service_account_enabled creation."
 }
 
-variable "account_id" {
-  type        = string
-  default     = ""
-  description = "The account id that is used to generate the service account email address and a stable unique id"
-
-}
-
-variable "project" {
+variable "project_id" {
   type        = string
   default     = ""
   description = "The project in which the resource belongs. If it is not provided, the provider project is used."
@@ -90,28 +83,14 @@ variable "keepers" {
   description = "Arbitrary map of values that, when changed, will trigger a new key to be generated."
 }
 
-variable "service_account_id" {
-  type        = string
-  default     = ""
-  description = "The account id that is used to generate the service account email address and a stable unique id"
-
-}
-
-variable "service_account_ids" {
-  type        = string
-  default     = ""
-  description = "The account id that is used to generate the service account email address and a stable unique id"
-
-}
-
 variable "google_service_account_iam_binding_enabled" {
   type        = bool
   default     = true
   description = "Flag to control the service_account_enabled creation."
 }
 
-variable "google_service_account_iam_policy_enabled" {
-  type        = bool
-  default     = true
-  description = "Flag to control the service_account_enabled creation."
+variable "members" {
+  type    = list(any)
+  default = []
+  description = "Identities that will be granted the privilege in role."
 }
