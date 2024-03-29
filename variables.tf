@@ -1,3 +1,7 @@
+# ------------------------------------------------------------------------------
+# Variables
+# ------------------------------------------------------------------------------
+
 variable "environment" {
   type        = string
   default     = ""
@@ -90,7 +94,13 @@ variable "google_service_account_iam_binding_enabled" {
 }
 
 variable "members" {
-  type    = list(any)
-  default = []
+  type        = list(string)
+  default     = [""]
   description = "Identities that will be granted the privilege in role."
+}
+
+variable "roles" {
+  description = "List of roles to be assigned to the service account"
+  type        = list(string)
+  default     = [""]
 }
