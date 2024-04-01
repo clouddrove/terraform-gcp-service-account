@@ -44,13 +44,6 @@ variable "description" {
   description = "A text description of the service account."
 }
 
-
-variable "display_name" {
-  type        = string
-  default     = ""
-  description = "A text description of the service account."
-}
-
 variable "service_account_key_enabled" {
   type        = bool
   default     = true
