@@ -21,6 +21,7 @@ module "service-account" {
   environment = var.environment
   label_order = var.label_order
 
+  display_name                = "example"
   service_account_enabled     = true
   project_id                  = "clouddrove-1"
   service_account_key_enabled = true
