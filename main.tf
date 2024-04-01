@@ -25,7 +25,7 @@ resource "google_service_account" "default" {
 resource "google_service_account_key" "default" {
   count = var.service_account_key_enabled && var.module_enabled ? 1 : 0
 
-  service_account_id = join("", [google_service_account.default[*].name])
+  service_account_id = join("", google_service_account.default[*].name)
   key_algorithm      = var.key_algorithm
   public_key_type    = var.public_key_type
   private_key_type   = var.private_key_type
@@ -40,7 +40,7 @@ resource "google_service_account_iam_binding" "admin-account-iam" {
   count = var.google_service_account_iam_binding_enabled && var.module_enabled ? length(var.roles) : 0
 
 
-  service_account_id = join("", [google_service_account.default[*].name])
+  service_account_id = join("", google_service_account.default[*].name)
   role               = var.roles[count.index]
   members            = var.members
 }
