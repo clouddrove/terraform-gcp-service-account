@@ -82,7 +82,7 @@ variable "keepers" {
 
 variable "google_service_account_iam_binding_enabled" {
   type        = bool
-  default     = true
+  default     = false
   description = "Flag to control the service_account_enabled creation."
 }
 
