@@ -27,7 +27,7 @@ module "service-account" {
   key_algorithm                              = "KEY_ALG_RSA_2048"
   public_key_type                            = "TYPE_X509_PEM_FILE"
   private_key_type                           = "TYPE_GOOGLE_CREDENTIALS_FILE"
-  google_service_account_iam_binding_enabled = true
+  google_service_account_iam_binding_enabled = false/true
   roles                                      = ["roles/iam.serviceAccountUser", "roles/editor"]
   members                                    = ["user:Example.example@example.com", "user:Example.example@example.com"]
 }

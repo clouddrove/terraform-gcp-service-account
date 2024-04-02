@@ -17,6 +17,7 @@ variable "label_order" {
 variable "name" {
   type    = string
   default = ""
+  description = "Names of the service accounts to create."
 }
 
 
