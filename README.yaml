@@ -31,7 +31,7 @@ badges:
 prerequesties:
   - name: Terraform
     url: https://learn.hashicorp.com/terraform/getting-started/install.html
-    version: ">= 1.4.6"
+    version: ">= 1.7.0"
     
 providers:
   - name: gcp
@@ -50,7 +50,6 @@ description: |-
 include:
   - "docs/io.md"
 
-# How to use this project
 # How to use this project
 usage: |-
   Here are some examples of how you can use this module in your inventory structure:
