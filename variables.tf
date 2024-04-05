@@ -1,3 +1,7 @@
+# ------------------------------------------------------------------------------
+# Variables
+# ------------------------------------------------------------------------------
+
 variable "environment" {
   type        = string
   default     = ""
@@ -11,8 +15,9 @@ variable "label_order" {
 }
 
 variable "name" {
-  type    = string
-  default = ""
+  type        = string
+  default     = ""
+  description = "Names of the service accounts to create."
 }
 
 
@@ -37,13 +42,6 @@ variable "project_id" {
 variable "description" {
   type        = string
   default     = "Managed by clouddrove"
-  description = "A text description of the service account."
-}
-
-
-variable "display_name" {
-  type        = string
-  default     = ""
   description = "A text description of the service account."
 }
 
@@ -85,12 +83,18 @@ variable "keepers" {
 
 variable "google_service_account_iam_binding_enabled" {
   type        = bool
-  default     = true
+  default     = false
   description = "Flag to control the service_account_enabled creation."
 }
 
 variable "members" {
-  type    = list(any)
-  default = []
+  type        = list(string)
+  default     = [""]
   description = "Identities that will be granted the privilege in role."
+}
+
+variable "roles" {
+  description = "List of roles to be assigned to the service account"
+  type        = list(string)
+  default     = [""]
 }
