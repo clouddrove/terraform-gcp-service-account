@@ -5,7 +5,7 @@
 #
 
 # Name of this project
-name : Terraform gcp Service-account
+name : Terraform GCP Service-account
 
 # License of this project
 license: "APACHE"
@@ -46,9 +46,6 @@ module_dependencies:
 #  description of this project
 description: |-
   Terraform module to create default Service-account with.
-# extra content
-include:
-  - "docs/io.md"
 
 # How to use this project
 usage: |-
