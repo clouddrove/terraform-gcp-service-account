@@ -15,7 +15,7 @@ provider "google" {
 
 
 module "service-account" {
-  source = "../"
+  source = "../../"
 
   name        = "test"
   environment = var.environment

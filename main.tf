@@ -44,3 +44,5 @@ resource "google_service_account_iam_binding" "admin-account-iam" {
   role               = var.roles[count.index]
   members            = var.members
 }
+
+

@@ -1,13 +1,7 @@
 # ------------------------------------------------------------------------------
-# Versions
+# Outputs
 # ------------------------------------------------------------------------------
 
-terraform {
-  required_version = ">= 1.7.0"
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "5.22.0"
-    }
-  }
+output "workload_identity_pool_id" {
+  value = google_iam_workload_identity_pool.github_pool.workload_identity_pool_id
 }
