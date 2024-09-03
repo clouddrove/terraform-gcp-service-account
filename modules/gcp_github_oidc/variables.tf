@@ -43,3 +43,9 @@ variable "repository_name" {
   type        = list(string)
   default     = [""]
 }
+
+variable "enable_oidc" {
+  description = "Enable or disable the OIDC resources"
+  type        = bool
+  default     = false
+}
