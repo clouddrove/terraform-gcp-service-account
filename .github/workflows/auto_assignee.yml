@@ -7,8 +7,10 @@ on:
   workflow_dispatch:
 jobs:
   assignee:
-    uses: clouddrove/github-shared-workflows/.github/workflows/auto_assignee.yml@1.2.2
+    uses: clouddrove/github-shared-workflows/.github/workflows/auto_assignee.yml@2.0.0
     secrets:
       GITHUB: ${{ secrets.GITHUB }}
     with:
-      assignees: 'clouddrove-ci'
+      provider: none
+      enable_version_check: true
+      working_directory: './examples/'
